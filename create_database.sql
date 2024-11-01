@@ -1,0 +1,32 @@
+CREATE DATABASE IF NOT EXISTS kayit CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+USE kayit;
+
+CREATE TABLE IF NOT EXISTS ogrenci (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    adi VARCHAR(45) NOT NULL,
+    soyadi VARCHAR(45) NOT NULL,
+    tckimlik VARCHAR(11) NOT NULL,
+    telefon VARCHAR(20),
+    cinsiyet VARCHAR(5),
+    veli_adi VARCHAR(45),
+    velitelefon VARCHAR(20),
+    dogumyeri VARCHAR(45),
+    dogumtarihi DATE,
+    adres TEXT
+);
+
+CREATE TABLE IF NOT EXISTS sinif (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS okul (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS bolum (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(15) NOT NULL
+);
